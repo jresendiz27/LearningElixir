@@ -1,6 +1,6 @@
 defmodule WebSocketSample.UserSocket do
   use Phoenix.Socket
-
+  require Logger
   ## Channels
   # channel "rooms:*", WebSocketSample.RoomChannel
 
