@@ -7,6 +7,7 @@ defmodule TestingElixir.Mixfile do
      elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     escript: escript,
      deps: deps]
   end
 
@@ -26,6 +27,9 @@ defmodule TestingElixir.Mixfile do
   #   {:mydep, git: "https://github.com/elixir-lang/mydep.git", tag: "0.1.0"}
   #
   # Type `mix help deps` for more examples and options
+  def escript do
+    [main_module: HelloWorld]
+  end
   defp deps do
     []
   end

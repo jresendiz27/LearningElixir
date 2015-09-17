@@ -1,6 +1,8 @@
-defmodule TestingElixirTest do
+ExUnit.start
+defmodule TestFibonacci do
+  Code.require_file "fibonacci.ex", __DIR__
   use ExUnit.Case
-  import Fibonacci
+
   test "Fibonacci(0) is 0" do
     assert Fibonacci.fib(0) == 0
   end
@@ -11,5 +13,9 @@ defmodule TestingElixirTest do
 
   test "Fibonacci(2) is 2" do
     assert Fibonacci.fib(3) == 2
+  end
+
+  test "Optimized Fibonacci (4) is 3" do
+    assert OptimizedFibonacci.fib(3) == 2
   end
 end
